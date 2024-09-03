@@ -4,7 +4,7 @@
     "href": "r-basics.html",
     "title": "4  R basics",
     "section": "",
-    "text": "4.1 Simple operations\n# Sum\n1+1\n\n[1] 2\n\n# Substraction\n10-4\n\n[1] 6\n\n# Multiplication\n2*2\n\n[1] 4\n\n# Division\n6/2\n\n[1] 3\n# Combination of numbers\nc(1, 2, 3)\n\n[1] 1 2 3\n\nc(1:3)  # The \":\" means from the number of the left to the one on the right\n\n[1] 1 2 3\n# Round the number\nround(3.14)\n\n[1] 3\n\nround(3.14, 1) #the \"1\" indicates that you want only one digit after the dot. \n\n[1] 3.1",
+    "text": "4.1 Simple operations\n# Sum\n1+1\n\n[1] 2\n\n# Substraction\n10-4\n\n[1] 6\n\n# Multiplication\n2*2\n\n[1] 4\n\n# Division\n6/2\n\n[1] 3\n# Combination of numbers\nc(1, 2, 3)\n\n[1] 1 2 3\n\nc(1:3)  # The \":\" means from the number of the left to the one on the right\n\n[1] 1 2 3\n# Round the number\nround(3.14)\n\n[1] 3\n\nround(3.14, 1) # The \"1\" indicates that you want only one digit after the dot. \n\n[1] 3.1\n# add a comment by using ctrl + shift + c\n# Comments are used for helping you organize your work. The software does not run the comment.\n# create a simple table with the number of trips by car, PT, walking and cycling in an intersection during the day. \n\nmodes = c(\"car\", \"PT\", \"bike\", \"walk\")\nTrips = c(2000, 300, 200, 500)\n\ntable = data.frame(modes,\n                   Trips)\n# Take a look at the table by clicking on the \"Environment\" page or running the following code:\n\nView(table)",
     "crumbs": [
       "**Day 1**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>R basics</span>"
@@ -122,6 +122,17 @@
     "title": "4  R basics",
     "section": "",
     "text": "Basic operations\n\n\n\nBasic commands",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R basics</span>"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#practical-example",
+    "href": "r-basics.html#practical-example",
+    "title": "4  R basics",
+    "section": "4.2 Practical example",
+    "text": "4.2 Practical example",
     "crumbs": [
       "**Day 1**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>R basics</span>"

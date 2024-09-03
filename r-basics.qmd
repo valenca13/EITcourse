@@ -38,4 +38,25 @@ round(3.14, 1) # The "1" indicates that you want only one digit after the dot.
 
 ```{r}
 
+# add a comment by using ctrl + shift + c
+# Comments are used for helping you organize your work. The software does not run the comment.
 ```
+
+```{r}
+# create a simple table with the number of trips by car, PT, walking and cycling in an intersection during the day. 
+
+modes = c("car", "PT", "bike", "walk")
+Trips = c(2000, 300, 200, 500)
+
+table = data.frame(modes,
+                   Trips)
+
+```
+
+```{r}
+# Take a look at the table by clicking on the "Environment" page or running the following code:
+
+View(table)
+```
+
+## Practical example
