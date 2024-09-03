@@ -1,0 +1,130 @@
+[
+  {
+    "objectID": "r-basics.html",
+    "href": "r-basics.html",
+    "title": "4  R basics",
+    "section": "",
+    "text": "4.1 Simple operations\n# Sum\n1+1\n\n[1] 2\n\n# Substraction\n10-4\n\n[1] 6\n\n# Multiplication\n2*2\n\n[1] 4\n\n# Division\n6/2\n\n[1] 3\n# Combination of numbers\nc(1, 2, 3)\n\n[1] 1 2 3\n\nc(1:3)  # The \":\" means from the number of the left to the one on the right\n\n[1] 1 2 3\n# Round the number\nround(3.14)\n\n[1] 3\n\nround(3.14, 1) #the \"1\" indicates that you want only one digit after the dot. \n\n[1] 3.1",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R basics</span>"
+    ]
+  },
+  {
+    "objectID": "structure.html",
+    "href": "structure.html",
+    "title": "2  Course Structure",
+    "section": "",
+    "text": "2.1 Day 1",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Course Structure</span>"
+    ]
+  },
+  {
+    "objectID": "structure.html#day-1",
+    "href": "structure.html#day-1",
+    "title": "2  Course Structure",
+    "section": "",
+    "text": "Morning\n\nIntroduction to programming techniques and data structures\nIntroduction to R, and RStudio: software installation and main packages\nR base and basics: examples and exercises\n\n\n\nAfternoon\n\nData manipulation: using the dplyr package to select, filter, left-join, group and summarize\nIntroduction to GIS and spatial data: import and visualize vector data\nR markdown and interactive maps",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Course Structure</span>"
+    ]
+  },
+  {
+    "objectID": "structure.html#day-2",
+    "href": "structure.html#day-2",
+    "title": "2  Course Structure",
+    "section": "2.2 Day 2",
+    "text": "2.2 Day 2\n\nMorning\n\nDesire lines from OD and transport zones\nGeoreference coordinates: examples from surveys\nAccessibility analysis: from buffers to road networks\n\n\n\nAfternoon\n\nOpen Transportation data: where to find it\nRouting with R: multimodal and intermodal (r5r demo - Rafael Pereira)\nGroup exercise",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Course Structure</span>"
+    ]
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "3  Software",
+    "section": "",
+    "text": "3.1 R and RStudio\nYou will need R installed on your computer (version 4.4.1 or higher) and also RStudio1.",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Software</span>"
+    ]
+  },
+  {
+    "objectID": "software.html#r-and-rstudio",
+    "href": "software.html#r-and-rstudio",
+    "title": "3  Software",
+    "section": "",
+    "text": "3.1.1 R\n\n\n3.1.2 RStudio\n\n\n3.1.3 Rtools\n\n\n3.1.4 R packages",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Software</span>"
+    ]
+  },
+  {
+    "objectID": "software.html#qgis",
+    "href": "software.html#qgis",
+    "title": "3  Software",
+    "section": "3.2 QGIS",
+    "text": "3.2 QGIS\nQGIS is a geographic information system software that is free and open-source. QGIS supports Windows, macOS, and Linux. It supports viewing, editing, printing, and analysis of geospatial data in a range of data formats2.\nIn this course QGIS will be used to geocode coordinates, make accessibility analysis using the street network, and visualize OD flows.\nQGIS allows the visualization of data with a graphical user interface (GUI), which can be preferable for basic usage. For advanced computation with geo data, programming software such as Python or R can be more adequate.\n\n3.2.1 Download\nYou should go for the Long-Term Version provided by QGIS. If you have installed the most up-to-date version, that’s also fine.\nhttps://qgis.org/download/\nThis download will be about 1.2-1.6 GB.\nYou should also have Python installed. Otherwise QGIS will install it for you [?].\n\nWindowsMacUbuntu\n\n\nDownload and open the executable file.\n\n\nDownload and open the executable file.\n\n\nYou can look for QGIS in the Ubuntu Software Center or install it via the terminal.\n\nsudo apt install gnupg software-properties-common\nsudo mkdir -m755 -p /etc/apt/keyrings  # not needed since apt version 2.4.0 like Debian 12 and Ubuntu 22 or newer\nsudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg\n\nAdd the QGIS repo for the latest stable QGIS (3.38.x Grenoble) to /etc/apt/sources.list.d/qgis.sources:\nTypes: deb deb-src\nURIs: https://qgis.org/ubuntugis-ltr\nSuites: jammy\nArchitectures: amd64\nComponents: main\nSigned-By: /etc/apt/keyrings/qgis-archive-keyring.gpg\n\nsudo apt update\nsudo apt install qgis qgis-plugin-grass saga\nsudo apt install python3-qgis\n\n\n\n\nConsider change the language to English in the global options (easier to follow tutorials).\n\n\n3.2.2 Plugins\nFor this course we will use the Open Route Service plugin.\n\nBasemaps\nInstall the useful free basemaps.\n\nCopy-past into the python console: https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py\n\n\n\nOpen Route Service\nSign up for an account and create a token. Copy your API.\n\nIn QGIS Plugins → Manage and install plugins → Search for ORS Tools → Install Open ORS Tools, provider, settings, and paste API key.\n\n\n\nqgis2web\nThis is an useful pluggin to create interactive HTML maps.\n\nIn QGIS Plugins → Manage and install plugins → Search for qgis2web → Install qgis2web.\n\nTutorial here: https://www.qgistutorials.com/en/docs/leaflet_maps_with_qgis2leaf.html",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Software</span>"
+    ]
+  },
+  {
+    "objectID": "software.html#footnotes",
+    "href": "software.html#footnotes",
+    "title": "3  Software",
+    "section": "",
+    "text": "We will use RStudio, although if you already use other studio such as VScode, that’s also fine.↩︎\nhttps://en.wikipedia.org/wiki/QGIS↩︎",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Software</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "5  Introduction",
+    "section": "",
+    "text": "5.1",
+    "crumbs": [
+      "**Day 2**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#section",
+    "href": "intro.html#section",
+    "title": "5  Introduction",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "**Day 2**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "r-basics.html#simple-things",
+    "href": "r-basics.html#simple-things",
+    "title": "4  R basics",
+    "section": "",
+    "text": "Basic operations\n\n\n\nBasic commands",
+    "crumbs": [
+      "**Day 1**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R basics</span>"
+    ]
+  }
+]
